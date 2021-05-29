@@ -1,0 +1,12 @@
+collector_url: http://127.0.0.1:8080
+monitoring:
+  - type: sys
+    category: cpu
+    monitor: cpu_data
+  - type: sys
+    category: memory
+    monitor: memory_data
+  - type: net
+    category: network
+    monitor: all_info
+    filter: network_netstats

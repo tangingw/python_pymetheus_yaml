@@ -1,0 +1,20 @@
+collector_url: http://127.0.0.1:8080
+monitoring:
+  - type: http
+    url: http://127.0.0.1:5000
+    service_port: 5000
+    service_desc: my web server
+    monitor:
+      - status
+      - response_time
+  - type: port
+    ip_address: 192.168.0.183
+    service_port: 53
+    service_proto: tcp
+    service_desc: my dns server
+    monitor:
+      - status
+  - type: sys
+    category: cpu
+    monitor:
+      - cpu_data
